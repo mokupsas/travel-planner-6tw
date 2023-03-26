@@ -1,0 +1,11 @@
+.main-container {
+  height: 100vh !important;
+}
+
+#cs-footer {
+ position: fixed;
+ bottom: 0;
+ background-color: white;
+ height: 36px;
+ width: 100%;
+}
