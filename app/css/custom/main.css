@@ -1,11 +1,38 @@
+body {
+  height: 100vh;
+}
+
+.index-container {
+  height: calc(100vh - 74px) !important;
+  margin-top: 74px;
+}
+
 .main-container {
-  height: 100vh !important;
+  height: calc(100vh - 74px) !important;
+  background-color: #fff !important;
+  margin-top: 74px;
+  padding-top: 20px;
+}
+
+.gtco-nav a {
+  text-decoration: none;
+}
+
+#smagumo-karusele {
+  width: 71%;
+  margin: 0 auto;
+  border-radius: 54px
+}
+
+.carousel-inner {
+  border-radius: 20px;
+  height: 480px;
 }
 
 #cs-footer {
  position: fixed;
  bottom: 0;
- background-color: white;
+ background-color: white !important;
  height: 36px;
  width: 100%;
 }
