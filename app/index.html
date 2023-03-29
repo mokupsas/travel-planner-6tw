@@ -59,8 +59,10 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
 	</head>
-	<body>
+	<body style="background: linear-gradient(180deg, rgba(124,153,180,1) 0%, rgba(133,169,205,1) 50%, rgba(142,184,229,1) 100%)">
 		
 	<div class="gtco-loader"></div>
 	
@@ -72,10 +74,10 @@
 		<div class="gtco-container">
 			
 			<div class="row">
-				<div class="col-sm-4 col-xs-12">
+				<div class="col-4">
 					<div id="gtco-logo"><a href="index.html">6 komanda <em>.</em></a></div>
 				</div>
-				<div class="col-xs-8 text-right menu-1">
+				<div class="col-8 text-end">
 					<ul>
 						<li><a href="index.html">Pagrindinis</a></li>
 						<!-- <li><a href="planuotojas.html">Planuotojas</a></li> -->
@@ -87,8 +89,31 @@
 		</div>
 	</nav>
 	
-	<div id="gtco-header" class="gtco-cover gtco-cover-md main-container" role="banner" style="background: linear-gradient(180deg, rgba(124,153,180,1) 0%, rgba(133,169,205,1) 50%, rgba(142,184,229,1) 100%)">
-		
+	<div class="gtco-cover gtco-cover-md index-container" role="banner">
+		<div class="gtco-container">
+			
+			<div class="index-planner-container">
+				<h1 class="mb-5">KELIONĖS PLANAVIMAS</h1>
+				<label>Iškeliauti iš</label>
+				<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+					<option selected>Pasirinkite išvykimo vietą</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				  </select>
+
+				  <label>Iškeliauti į</label>
+				  <select class="form-select form-select-lg mb-5" aria-label=".form-select-lg example">
+					<option selected>Pasirinkite kelionės tikslą</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				  </select> 
+
+				  <button type="submit" class="btn btn-success btn-planner-search">Ieškoti</button>
+			</div>
+
+		</div>
 	</div>
 	
 	<footer id="cs-footer" role="contentinfo">
@@ -125,6 +150,8 @@
 
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
 	</body>
 </html>
