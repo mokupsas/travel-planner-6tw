@@ -14,6 +14,19 @@ body {
   padding-top: 20px;
 }
 
+.index-planner-container {
+  background-color: #fff;
+  padding: 48px;
+  width: 480px;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.btn-planner-search {
+  background-color: #3F6C51;
+  padding: 12px 24px !important;
+}
+
 .gtco-nav a {
   text-decoration: none;
 }
