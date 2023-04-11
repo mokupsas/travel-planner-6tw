@@ -22,6 +22,22 @@ body {
   margin-top: 50px;
 }
 
+.data-input-container {
+  background-color: #efe8ae;
+  padding: 48px;
+  width: 600px;
+  border-radius: 15px;
+  margin-top: 100px;
+}
+
+.data-input-field input {
+  height: 30px;
+}
+
+.data-input-field input::placeholder {
+  font-size: 12px;
+}
+
 .btn-planner-search {
   background-color: #3F6C51;
   padding: 12px 24px !important;
