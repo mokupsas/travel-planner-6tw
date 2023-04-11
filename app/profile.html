@@ -93,28 +93,34 @@
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div class="gtco-container">
 			
-			<div class="data-input-container">
-				<h1 class="mb-5">ĮVESKITE BENDRAKELEIVIŲ DUOMENIS</h1>
-                  <label>Bnedrakeleivio duomenys</label>
+			<div style="display: flex;">
+                <div class="data-input-container">
+                  <h1 class="mb-5">PROFILIO INFORMACIJA</h1>
                   <div class="data-input-field">
                     <input type="text" class="form-control" placeholder="Vardas" aria-describedby="basic-addon1">
                   </div>
                   <div class="data-input-field" style="margin-top: 10px;">
                     <input type="text" class="form-control" placeholder="Pavardė" aria-describedby="basic-addon1">
                   </div>
-                  <div style="margin-top: 10px;" style="font-weight: normal;" ></div>
+                  <div style="margin-top: 10px;" style="font-weight: normal;"></div>
                   <label for="datepicker">Gimimo data:</label>
-                <input type="date" id="datepicker" name="datepicker">
-                <form>
-                    <label style="margin-top: 30px;" for="image-upload">Įkelkite bendrakeleivio nuotrauką:</label>
+                  <input type="date" id="datepicker" name="datepicker">
+                  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control" placeholder="Telefono numeris" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control" placeholder="Elektroninis paštas" aria-describedby="basic-addon1">
+                  </div>
+                  <form>
+                    <label style="margin-top: 30px;" for="image-upload">Įkelkite naują profilio nuotrauką:</label>
                     <input type="file" id="image-upload" name="image">
-                </form>
-            </div>
-                <div>
-                    <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="done()";>Patvirtinti ir baigti</button>
-            
-                    <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="another()";>Patvirtinti ir pridėti kitą keleivį</button>
+                  </form>
+                  <div>
+                    <button style="margin-top: 50px; display: flex;" type="submit" class="btn btn-success btn-planner-search" onclick="done()";>Patvirtinti pakeitimus</button>
                 </div>
+                </div>
+                <img id="profile-photo" src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="profile-photo" style="max-width: 50%; margin-top: 100px; margin-left: 50px; transform: scale(0.5);">
+              </div>
             <style>
                 img {
                   filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);
@@ -124,11 +130,19 @@
 
             <script>
                 function done() {
-                    alert("Jūsų duomenys sėkmingai išsaugoti");
-                }
+                    var fileInput = document.getElementById('image-upload');
+                    var file = fileInput.files[0];
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function(event) {
+                    var imageDataUrl = event.target.result;
+                    var imageElement = document.getElementById('profile-photo');
+                    imageElement.src = imageDataUrl;
+                    };
 
-                function another() {
-                    window.location.href = "other.html";
+                    const profilePhoto = document.getElementById("profile-photo");
+                    profilePhoto.src = "https://example.com/new-photo.png";
+                    alert("Jūsų duomenys sėkmingai išsaugoti");
                 }
             </script>
 		</div>
@@ -173,4 +187,4 @@
 
 	</body>
 </html>
-
+  
