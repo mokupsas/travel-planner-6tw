@@ -56,6 +56,7 @@ body {
 .btn-planner-search {
   background-color: #3F6C51;
   padding: 12px 24px !important;
+  font-size: 12px !important;
 }
 
 .gtco-nav a {
@@ -94,9 +95,14 @@ label {
 }
 
 .form-input {
-  height: 30px !important;
+  height: 34px !important;
+  font-size: 14px !important;
 }
 
 .footer-encrypt-label {
   text-align: right;
+}
+
+.form-label {
+  font-size: 14px !important;
 }
