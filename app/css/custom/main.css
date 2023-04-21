@@ -96,3 +96,7 @@ label {
 .form-input {
   height: 30px !important;
 }
+
+.footer-encrypt-label {
+  text-align: right;
+}
