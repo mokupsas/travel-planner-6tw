@@ -1,6 +1,6 @@
 Norint atidaryti puslapį, reikia pradėti lokalų serverį:
 
-1. Kompiuteryje turi būti instaliuotas Python
-2. Dukart paspausti (atidaryti) failą "serverStart.bat"
+1. Kompiuteryje turi būtį instaliuotas Python
+2. Dukart paskausti (atidaryti) failą "serverStart.bat"
 	- Iššokęs terminalo langas palaiko įjungtą serverį
-3. Naršyklėje įvesti "localhost:8000"
+4. Naršyklėje įvesti "localhost:8000"
