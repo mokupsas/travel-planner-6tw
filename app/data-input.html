@@ -125,19 +125,23 @@
             <div>
                 <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="validateAndRedirect();">Patvirtinti</button>
               </div>              
-            <style>
-                img {
-                  filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);
-                }
-            </style>
-            <img src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0;">
+            <img src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
+			<img src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; bottom: 0; right: 0; left: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
+			<img src="https://img.freepik.com/free-icon/plane_318-905120.jpg" style="position: fixed; top: 300px; right: 0; transform: rotate(-30deg) scale(0.2); filter: hue-rotate(15deg);">
 
-            <script>
+			<script>
                 function validateAndRedirect() {
                     var selectField = document.getElementById("travelers");
                     var selectedValue = selectField.value;
                     if (selectedValue == "1") {
                         alert("Jūsų duomenys sėkmingai išsaugoti");
+						var newButton = document.createElement("button");
+						newButton.innerHTML = "Toliau";
+						newButton.className = "btn btn-success btn-planner-search just-button";
+						newButton.onclick = function() {
+							window.location.href = "travel-plan.html";
+						};
+          				document.body.appendChild(newButton);
                     } else if (selectedValue == "2") {
                         window.location.href = "other.html";
                     } else {
