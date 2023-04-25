@@ -82,7 +82,7 @@
 						<li><a href="index.html">Pagrindinis</a></li>
 						<!-- <li><a href="planuotojas.html">Planuotojas</a></li> -->
 						<li><a href="smagumo.html">Smagumo kambarys</a></li>
-                        <li><a href="profile.html">Profilis</a></li>
+                        <li><a href="login.html">Profilis</a></li>
 					</ul>	
 				</div>
 			</div>
@@ -117,7 +117,7 @@
                   </form>
                   <div>
                     <button style="margin-top: 50px; display: flex;" type="submit" class="btn btn-success btn-planner-search" onclick="done()";>Patvirtinti pakeitimus</button>
-                </div>
+                  </div>
                 </div>
                 <img id="profile-photo" src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png" alt="profile-photo" style="max-width: 50%; margin-top: 100px; margin-left: 50px; transform: scale(0.5);">
               </div>
@@ -127,18 +127,23 @@
 
             <script>
                 function done() {
-                    var fileInput = document.getElementById('image-upload');
+					var fileInput = document.getElementById('image-upload');
                     var file = fileInput.files[0];
-                    var reader = new FileReader();
-                    reader.readAsDataURL(file);
-                    reader.onload = function(event) {
-                    var imageDataUrl = event.target.result;
-                    var imageElement = document.getElementById('profile-photo');
-                    imageElement.src = imageDataUrl;
-                    };
 
-                    const profilePhoto = document.getElementById("profile-photo");
-                    profilePhoto.src = "https://example.com/new-photo.png";
+					if(file){
+						var reader = new FileReader();
+                    	reader.readAsDataURL(file);
+                    	reader.onload = function(event) {
+							var imageDataUrl = event.target.result;
+                    		var imageElement = document.getElementById('profile-photo');
+                    		imageElement.src = imageDataUrl;
+                    	};
+					}
+					else{
+						const profilePhoto = document.getElementById("profile-photo");
+                    	profilePhoto.src = "https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png";
+					}
+					
                     alert("Jūsų duomenys sėkmingai išsaugoti");
                 }
             </script>

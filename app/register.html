@@ -93,48 +93,38 @@
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div class="gtco-container">
 			
-			<div class="data-input-container">
-				<h1 class="mb-5">ĮVESKITE BENDRAKELEIVIŲ DUOMENIS</h1>
-                  <label>Bendrakeleivio duomenys</label>
+			<div style="display: flex;">
+                <div class="data-input-container">
+                  <h1 class="mb-5">REGISTRACIJA</h1>
                   <div class="data-input-field">
-                    <input type="text" class="form-control" placeholder="Vardas" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control form-input" placeholder="Vardas" aria-describedby="basic-addon1">
                   </div>
                   <div class="data-input-field" style="margin-top: 10px;">
-                    <input type="text" class="form-control" placeholder="Pavardė" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control form-input" placeholder="Pavardė" aria-describedby="basic-addon1">
                   </div>
-                  <div style="margin-top: 10px;" style="font-weight: normal;" ></div>
-                  <label for="datepicker">Gimimo data:</label>
-                <input type="date" id="datepicker" name="datepicker">
-                <form>
-                    <label style="margin-top: 30px;" for="image-upload">Įkelkite bendrakeleivio nuotrauką:</label>
-                    <input type="file" id="image-upload" name="image">
-                </form>
-            </div>
-                <div>
-                    <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="done()";>Patvirtinti ir baigti</button>
-            
-                    <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="another()";>Patvirtinti ir pridėti kitą keleivį</button>
+                  <div style="margin-top: 10px;" style="font-weight: normal;"></div>
+                  <label class="form-label" for="datepicker">Gimimo data:</label>
+                  <input type="date" id="datepicker" name="datepicker">
+                  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control form-input" placeholder="Telefono numeris" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control form-input" placeholder="Elektroninis paštas" aria-describedby="basic-addon1">
+                  </div>
+				  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control form-input" placeholder="Slaptažodis" aria-describedby="basic-addon1">
+                  </div>
+				  <div class="data-input-field" style="margin-top: 10px;">
+                    <input type="text" class="form-control form-input" placeholder="Pakartokite slaptažodį" aria-describedby="basic-addon1">
+                  </div>
+                  <div>
+                    <a href="login.html" type="submit" style="color: white; margin-top: 30px; margin-bottom: 0px; display: flex-start;" class="btn btn-success btn-planner-search">Užsiregistruoti</a>
+                  </div>
                 </div>
+              </div>
 			<img src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
 			<img src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; bottom: 0; right: 0; left: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
 			<img src="https://img.freepik.com/free-icon/plane_318-905120.jpg" style="position: fixed; top: 300px; right: 0; transform: rotate(-30deg) scale(0.2); filter: hue-rotate(15deg);">
-
-            <script>
-                function done() {
-                    alert("Jūsų duomenys sėkmingai išsaugoti");
-					var newButton = document.createElement("button");
-						newButton.innerHTML = "Toliau";
-						newButton.className = "btn btn-success btn-planner-search just-button";
-						newButton.onclick = function() {
-							window.location.href = "main-travel.html";
-						};
-          				document.body.appendChild(newButton);
-                }
-
-                function another() {
-                    window.location.href = "other.html";
-                }
-            </script>
 		</div>
 	</div>
 	
@@ -143,7 +133,7 @@
 			<div class="row">
 				<div class="col-md-4"><a class="footer-link link-primary" href="administrate.html">Administravimas</a></div>
 				<div class="col-md-4 offset-md-4 footer-encrypt-label">Palaikomas RSA šifravimas</div>
-			</div>
+			</div>	
 		</div>
 	</footer>
 
@@ -180,4 +170,4 @@
 
 	</body>
 </html>
-
+  
