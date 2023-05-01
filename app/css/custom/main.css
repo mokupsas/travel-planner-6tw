@@ -171,3 +171,14 @@ label {
 .form-label {
   font-size: 14px !important;
 }
+
+.smagumo-review {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 17px;
+  color: white;
+  padding: 12px 40px;
+  background-color: black;
+  width: 100%;
+}
