@@ -50,6 +50,42 @@ body {
   right: 880px;
 }
 
+.loading-travel {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+  position: absolute;
+  left: 300px;
+  position: absolute;
+  top: 30px;
+}
+
+.fireworks {
+  position: fixed;
+  bottom: 0;
+  left: 550px;
+}
+
+.travel-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1750px;
+  color: white;
+  text-decoration: none;
+  background-color: #3F6C51;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+  position: fixed;
+  top: 100px;
+}
+
 .data-input-container {
   background-color: #efe8ae;
   padding: 48px;
