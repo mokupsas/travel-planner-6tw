@@ -86,6 +86,22 @@ body {
   top: 100px;
 }
 
+.travel-table {
+  font-size: 14px;
+}
+
+.travel-image {
+  display: block;
+  margin: 50px auto;
+  max-width: 100%;
+  scale: 0.35;
+  position: fixed;
+}
+
+.background-plane {
+  z-index: -1;
+}
+
 .data-input-container {
   background-color: #efe8ae;
   padding: 48px;
