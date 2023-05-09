@@ -243,3 +243,29 @@ label {
     position: absolute;
     top: -21px;
 }
+
+.carousel-img {
+	height: 480px;
+}
+
+.ad-banner-img-left {
+	height: 560px;
+    position: absolute;
+    top: 149px;
+    left: 100px;
+    z-index: 200;
+	border-radius: 20px;
+}
+
+.ad-banner-img-right {
+	height: 560px;
+    position: absolute;
+    top: 149px;
+    right: 100px;
+    z-index: 200;
+	border-radius: 20px;
+}
+
+#page {
+	position: relative;
+}
