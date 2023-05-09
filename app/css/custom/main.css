@@ -182,3 +182,20 @@ label {
   background-color: black;
   width: 100%;
 }
+
+.white-nav-box {
+	background-color: white;
+    width: 320px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.logo {
+	height: 75px;
+    line-height: 74px;
+    /* display: table-column; */
+    position: absolute;
+    top: -21px;
+}
