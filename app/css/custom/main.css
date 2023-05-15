@@ -58,8 +58,18 @@ body {
 	margin: 0;
   position: absolute;
   left: 300px;
-  position: absolute;
   top: 30px;
+}
+
+.index-text {
+  display: flex;
+  top: 440px;
+  left: 400px;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  font-family: 'Century Gothic';
+
 }
 
 .dropbtn {
