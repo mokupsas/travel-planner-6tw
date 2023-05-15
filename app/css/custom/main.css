@@ -252,6 +252,7 @@ label {
     /* display: table-column; */
     position: absolute;
     top: -21px;
+    background-color: #fff;
 }
 
 .carousel-img {
