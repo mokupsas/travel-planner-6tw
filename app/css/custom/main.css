@@ -14,6 +14,18 @@ body {
   padding-top: 20px;
 }
 
+.main-container::before {
+  content: "";
+  background-image: url('https://i.natgeofe.com/n/a23baf47-dec2-4ecd-8466-fc7b2c7806bd/plane-flight-path-munich-01_16x9.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
 .index-planner-container {
   background-color: #efe8ae;
   padding: 48px;
