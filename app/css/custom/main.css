@@ -260,7 +260,7 @@ label {
 .ad-banner-img-right {
 	height: 560px;
     position: absolute;
-    top: 149px;
+    top: 100px;
     right: 100px;
     z-index: 200;
 	border-radius: 20px;
