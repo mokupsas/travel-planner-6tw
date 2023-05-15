@@ -122,7 +122,7 @@
                     <input type="file" id="image-upload" name="image">
                 </form>
             </div>
-                <div>
+                <div id="form-input-btns">
                     <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="done()";>Patvirtinti ir baigti</button>
             
                     <button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick="another()";>Patvirtinti ir pridėti kitą keleivį</button>
@@ -140,11 +140,14 @@
                     alert("Jūsų duomenys sėkmingai išsaugoti");
 					var newButton = document.createElement("button");
 						newButton.innerHTML = "Toliau";
-						newButton.className = "btn btn-success btn-planner-search just-button";
+						newButton.className = "btn btn-success btn-planner-search";
+						newButton.style = "margin-top: 30px"
 						newButton.onclick = function() {
 							window.location.href = "main-travel.html";
 						};
-          				document.body.appendChild(newButton);
+
+
+          				document.getElementById('form-input-btns').appendChild(newButton);
                 }
 
                 function another() {
