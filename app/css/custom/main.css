@@ -279,3 +279,10 @@ label {
 #page {
 	position: relative;
 }
+
+.footer-sec-badge {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 32px;
+}
