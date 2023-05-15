@@ -299,3 +299,7 @@ label {
   left: -10px;
   height: 32px;
 }
+
+.gtco-container {
+ padding-left: 80px !important;
+}
