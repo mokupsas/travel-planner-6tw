@@ -154,8 +154,8 @@
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div id="mainSpace" class="gtco-container">
 
-			<div style="display: block; table-layout: fixed;">
-				<table id="mainTable" class="travel-table" >
+			<div id="mainTable" style="display: block; table-layout: fixed;">
+				<table class="travel-table" >
 					<thead>
 						<tr>
 							<th>Pasirinkimas</th>
@@ -174,8 +174,6 @@
 							<td>Pullman Paris Tour Eiffel, 18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France</td>
 							<td>601€</td>
 						</tr>
-					</tbody>
-					<tbody>
 						<tr>
 							<td>
 								<input type="checkbox">
@@ -185,8 +183,6 @@
 							<td>B&B Hotel Paris 17 Batignolles, 4 Bd Berthier, 75017 Paris, France</td>
 							<td>79€</td>
 						</tr>
-					</tbody>
-					<tbody>
 						<tr>
 							<td>
 								<input type="checkbox">
@@ -196,8 +192,6 @@
 							<td>hotelF1 Paris Saint-Ouen - Marché aux Puces, 29 Rue du Dr Babinski, 75018 Paris, France</td>
 							<td>37€</td>
 						</tr>
-					</tbody>
-					<tbody>
 						<tr>
 							<td>
 								<input type="checkbox">
@@ -221,7 +215,7 @@
 				</button>
 			</div>
 
-			<div style="display: inline-block">
+			<div id="addRowButton" style="display: inline-block">
 				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="drawAddTable();">
 					Pridėti naują viešbutį
 				</button>
@@ -264,6 +258,7 @@
 
 
 			<script>
+				const mainSpace = document.getElementById("mainSpace");
 				const headers = [
 					"Viešbučio pavadinimas",
 					"Adresas",
@@ -278,8 +273,13 @@
 					alert("Viešbutis sėkmingai pridėtas");
 
 					if(document.getElementById('addTable')){
-						tableSpace.removeChild(document.getElementById('addTable'));
+						mainSpace.removeChild(document.getElementById('addTable'));
 					}
+					if(document.getElementById('addConfirm')){
+						mainSpace.removeChild(document.getElementById('addConfirm'));
+					}
+
+					document.getElementById('addRowButton').removeAttribute('hidden');
                 }
 				
 				function validateDelete() {
@@ -288,14 +288,17 @@
 				
 				function drawAddTable(){
 					if(document.getElementById('addTable')){
-						tableSpace.removeChild(document.getElementById('addTable'));
+						mainSpace.removeChild(document.getElementById('addTable'));
+					}
+					if(document.getElementById('addRowButton')){
+						document.getElementById('addRowButton').setAttribute('hidden', 'true')
 					}
 					
 					var divTable = document.createElement("div");
 					divTable.setAttribute('style', 'display: block; table-layout: fixed;');
+					divTable.setAttribute('id', 'addTable');
 
 					var addTable = document.createElement("table");
-					addTable.setAttribute('id', 'addTable');
 					addTable.setAttribute('class', 'travel-table');
 
 					divTable.appendChild(addTable);
@@ -330,7 +333,29 @@
 
 					body.appendChild(bodyRow);
 
-					document.getElementById("mainSpace").appendChild(divTable);
+					mainSpace.appendChild(divTable);
+
+					// confirm button
+					var divConfirm = document.createElement("div");
+					divConfirm.setAttribute('id', 'addConfirm');
+					divConfirm.setAttribute('style', 'display: inline-block');
+
+					var buttonConfirm = document.createElement("button");
+					buttonConfirm.setAttribute('style', 'margin-top: 0px');
+					buttonConfirm.setAttribute('class', 'btn btn-success btn-planner-search');
+					buttonConfirm.setAttribute('onclick', 'validateAdd()');
+					buttonConfirm.textContent = "Pridėti";
+
+					divConfirm.appendChild(buttonConfirm);
+					mainSpace.appendChild(divConfirm);
+				}
+
+				function addRow(){
+					//TODO
+				}
+
+				function removeRows(){
+					//TODO
 				}
             </script>
 		</div>
