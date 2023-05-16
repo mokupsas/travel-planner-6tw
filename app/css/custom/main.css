@@ -303,3 +303,12 @@ label {
 .gtco-container {
  padding-left: 80px !important;
 }
+
+.payment-gateways-icon {
+  height: 140px;
+  margin: 0 auto;
+  margin-top: 0px;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
