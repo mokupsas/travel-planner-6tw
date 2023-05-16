@@ -82,13 +82,14 @@
 			border-collapse: collapse;
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 			margin: 30px auto;
+			margin-bottom: 15px;
 			max-width: 800px;
 			width: 100%;
-            top: 300px;
+            /*top: 300px;
             top: 200px;
-            position: fixed;
             top: 200px;
-            left: 450px;
+            left: 450px;*/
+            position: relative;
 		}
 
 		th, td {
@@ -151,12 +152,13 @@
 	</nav>
 	
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
-		<div class="gtco-container">
+		<div id="mainSpace" class="gtco-container">
 
-			<div style="display: block; position: absolute;">
-				<table class="travel-table" contenteditable>
+			<div style="display: block; table-layout: fixed;">
+				<table id="mainTable" class="travel-table" >
 					<thead>
 						<tr>
+							<th>Pasirinkimas</th>
 							<th>Viešbučio pavadinimas</th>
 							<th>Adresas</th>
 							<th>Nakties kaina</th>
@@ -164,6 +166,10 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td>
+								<input type="checkbox">
+								<label> Pasirinkti</label>
+							</td>
 							<td>Pullman Paris Tour Eiffel</td>
 							<td>Pullman Paris Tour Eiffel, 18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France</td>
 							<td>601€</td>
@@ -171,6 +177,10 @@
 					</tbody>
 					<tbody>
 						<tr>
+							<td>
+								<input type="checkbox">
+								<label> Pasirinkti</label>
+							</td>
 							<td>B&B HOTEL Paris 17 Batignolles</td>
 							<td>B&B Hotel Paris 17 Batignolles, 4 Bd Berthier, 75017 Paris, France</td>
 							<td>79€</td>
@@ -178,6 +188,10 @@
 					</tbody>
 					<tbody>
 						<tr>
+							<td>
+								<input type="checkbox">
+								<label> Pasirinkti</label>
+							</td>
 							<td>HotelF1 Paris Saint Ouen Marché Aux Puces</td>
 							<td>hotelF1 Paris Saint-Ouen - Marché aux Puces, 29 Rue du Dr Babinski, 75018 Paris, France</td>
 							<td>37€</td>
@@ -185,6 +199,10 @@
 					</tbody>
 					<tbody>
 						<tr>
+							<td>
+								<input type="checkbox">
+								<label> Pasirinkti</label>
+							</td>
 							<td>hotelF1 Paris Porte de Châtillon</td>
 							<td>hotelF1 Paris Porte de Châtillon, 23 Av. de la Prte de Châtillon, 75014 Paris, France</td>
 							<td>37€</td>
@@ -194,14 +212,46 @@
 			</div>
 
 			<div style="display: inline-block">
-				<button style="margin-top: 50px" class="btn btn-success btn-planner-search" >
+				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" >
 					<a href="administrate.html" style="color: #fff; text-decoration: none;">Atšaukti</a>
 				</button>
 
-				<button style="margin-top: 50px" class="btn btn-success btn-planner-search" onclick="validate();">
+				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="validateEdit();">
 					<a href="administrate.html" style="color: #fff; text-decoration: none;">Patvirtinti redagavimus</a>
 				</button>
 			</div>
+
+			<div style="display: inline-block">
+				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="addTableMake();">
+					Pridėti naują viešbutį
+				</button>
+			</div>
+
+			<!--
+			<div style="display: block; table-layout: fixed;">
+				<table id="addTable" class="travel-table" contenteditable>
+					<thead>
+						<tr>
+							<th>Pasirinkimas</th>
+							<th>Viešbučio pavadinimas</th>
+							<th>Adresas</th>
+							<th>Nakties kaina</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="checkbox">
+								<label> Pasirinkti</label>
+							</td>
+							<td>Pullman Paris Tour Eiffel</td>
+							<td>Pullman Paris Tour Eiffel, 18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France</td>
+							<td>601€</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			-->
       
 			         
 			<img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
@@ -214,9 +264,80 @@
 
 
 			<script>
-                function validate() {
-                    alert("Jūsų duomenys sėkmingai išsaugoti");
+                function validateEdit() {
+					alert("Jūsų duomenys sėkmingai išsaugoti");
                 }
+				
+				function validateAdd() {
+					alert("Viešbutis sėkmingai pridėtas");
+                }
+				
+				function validateDelete() {
+					alert("Viešbutis sėkmingai pašalintas");
+                }
+				
+				function addTableMake(){
+					if(document.getElementById('addTable')){
+						tableSpace.removeChild(document.getElementById('addTable'));
+					}
+					
+					var divTable = document.createElement("div");
+					divTable.setAttribute('style', 'display: block; table-layout: fixed;');
+
+					var addTable = document.createElement("table");
+					addTable.setAttribute('id', 'addTable');
+					addTable.setAttribute('class', 'travel-table');
+
+					divTable.appendChild(addTable);
+
+					var head = document.createElement("thead");
+					addTable.appendChild(head);
+					var body = document.createElement("tbody");
+					addTable.appendChild(body);
+
+					// headers
+					var headRow = document.createElement("tr");
+					var headers = [
+						document.createElement("td"),
+						document.createElement("td"),
+						document.createElement("td")
+					]
+
+					headers[0].textContent = "Viešbučio pavadinimas";
+					headers[1].textContent = "Adresas";
+					headers[2].textContent = "Nakties kaina";
+
+					headRow.appendChild(headers[0]);
+					headRow.appendChild(headers[1]);
+					headRow.appendChild(headers[2]);
+
+					head.appendChild(headRow);
+
+					// data cells
+					var bodyRow = document.createElement("tr");
+					var slots = [
+						document.createElement("td"),
+						document.createElement("td"),
+						document.createElement("td")
+					]
+
+					slots[0].textContent = "blank";
+					slots[0].setAttribute('contenteditable', 'true');
+					slots[1].textContent = "blank";
+					slots[1].setAttribute('contenteditable', 'true');
+					slots[2].textContent = "blank";
+					slots[2].setAttribute('contenteditable', 'true');
+
+					bodyRow.appendChild(slots[0]);
+					bodyRow.appendChild(slots[1]);
+					bodyRow.appendChild(slots[2]);
+
+
+					body.appendChild(bodyRow);
+
+
+					document.getElementById("mainSpace").appendChild(divTable);
+				}
             </script>
 		</div>
 	</div>
