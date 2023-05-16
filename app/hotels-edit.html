@@ -222,7 +222,7 @@
 			</div>
 
 			<div style="display: inline-block">
-				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="addTableMake();">
+				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="drawAddTable();">
 					Pridėti naują viešbutį
 				</button>
 			</div>
@@ -264,19 +264,29 @@
 
 
 			<script>
+				const headers = [
+					"Viešbučio pavadinimas",
+					"Adresas",
+					"Nakties kaina"
+				]
+
                 function validateEdit() {
 					alert("Jūsų duomenys sėkmingai išsaugoti");
                 }
 				
 				function validateAdd() {
 					alert("Viešbutis sėkmingai pridėtas");
+
+					if(document.getElementById('addTable')){
+						tableSpace.removeChild(document.getElementById('addTable'));
+					}
                 }
 				
 				function validateDelete() {
 					alert("Viešbutis sėkmingai pašalintas");
                 }
 				
-				function addTableMake(){
+				function drawAddTable(){
 					if(document.getElementById('addTable')){
 						tableSpace.removeChild(document.getElementById('addTable'));
 					}
@@ -297,44 +307,28 @@
 
 					// headers
 					var headRow = document.createElement("tr");
-					var headers = [
-						document.createElement("td"),
-						document.createElement("td"),
-						document.createElement("td")
-					]
 
-					headers[0].textContent = "Viešbučio pavadinimas";
-					headers[1].textContent = "Adresas";
-					headers[2].textContent = "Nakties kaina";
+					for(let i = 0; i < headers.length; i++){
+						var temp = document.createElement("td");
+						temp.textContent = headers[i];
 
-					headRow.appendChild(headers[0]);
-					headRow.appendChild(headers[1]);
-					headRow.appendChild(headers[2]);
+						headRow.appendChild(temp);
+					}
 
 					head.appendChild(headRow);
 
 					// data cells
 					var bodyRow = document.createElement("tr");
-					var slots = [
-						document.createElement("td"),
-						document.createElement("td"),
-						document.createElement("td")
-					]
 
-					slots[0].textContent = "blank";
-					slots[0].setAttribute('contenteditable', 'true');
-					slots[1].textContent = "blank";
-					slots[1].setAttribute('contenteditable', 'true');
-					slots[2].textContent = "blank";
-					slots[2].setAttribute('contenteditable', 'true');
+					for(let i = 0; i < headers.length; i++){
+						var temp = document.createElement("td");
+						temp.textContent = "blank";
+						temp.setAttribute('contenteditable', 'true');
 
-					bodyRow.appendChild(slots[0]);
-					bodyRow.appendChild(slots[1]);
-					bodyRow.appendChild(slots[2]);
-
+						bodyRow.appendChild(temp);
+					}
 
 					body.appendChild(bodyRow);
-
 
 					document.getElementById("mainSpace").appendChild(divTable);
 				}
