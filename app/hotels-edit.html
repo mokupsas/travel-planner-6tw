@@ -278,12 +278,29 @@
 					if(document.getElementById('addTableDiv')){
 						mainSpace.removeChild(document.getElementById('addTableDiv'));
 					}
+					if(document.getElementById('addCancel')){
+						mainSpace.removeChild(document.getElementById('addCancel'));
+					}
 					if(document.getElementById('addConfirm')){
 						mainSpace.removeChild(document.getElementById('addConfirm'));
 					}
 
 					document.getElementById('addRowButton').removeAttribute('hidden');
                 }
+				
+				function validateAddCancel(){
+					if(document.getElementById('addTableDiv')){
+						mainSpace.removeChild(document.getElementById('addTableDiv'));
+					}
+					if(document.getElementById('addCancel')){
+						mainSpace.removeChild(document.getElementById('addCancel'));
+					}
+					if(document.getElementById('addConfirm')){
+						mainSpace.removeChild(document.getElementById('addConfirm'));
+					}
+
+					document.getElementById('addRowButton').removeAttribute('hidden');
+				}
 				
 				function validateDelete() {
 					if(removeRows()){
@@ -344,6 +361,19 @@
 
 					mainSpace.appendChild(divTable);
 
+					// cancel button
+					var divCancel = document.createElement("div");
+					divCancel.setAttribute('id', 'addCancel');
+					divCancel.setAttribute('style', 'display: inline-block');
+
+					var buttonCancel = document.createElement("button");
+					buttonCancel.setAttribute('style', 'margin-top: 0px');
+					buttonCancel.setAttribute('class', 'btn btn-success btn-planner-search');
+					buttonCancel.setAttribute('onclick', 'validateAddCancel()');
+					buttonCancel.textContent = "Atšaukti";
+
+					divCancel.appendChild(buttonCancel);
+
 					// confirm button
 					var divConfirm = document.createElement("div");
 					divConfirm.setAttribute('id', 'addConfirm');
@@ -356,6 +386,8 @@
 					buttonConfirm.textContent = "Pridėti";
 
 					divConfirm.appendChild(buttonConfirm);
+
+					mainSpace.appendChild(divCancel);
 					mainSpace.appendChild(divConfirm);
 				}
 
