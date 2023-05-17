@@ -155,8 +155,8 @@
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div id="mainSpace" class="gtco-container">
 
-			<div id="mainTable" style="display: block; table-layout: fixed;">
-				<table class="travel-table" >
+			<div id="mainTableDiv" style="display: block; table-layout: fixed;">
+				<table id="mainTable" class="travel-table" >
 					<thead>
 						<tr>
 							<th>Pasirinkimas</th>
@@ -166,37 +166,33 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>
+						<tr contenteditable="true">
+							<td contenteditable="false">
 								<input type="checkbox">
-								<label> Pasirinkti</label>
 							</td>
 							<td>Pullman Paris Tour Eiffel</td>
 							<td>Pullman Paris Tour Eiffel, 18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France</td>
 							<td>601€</td>
 						</tr>
-						<tr>
-							<td>
+						<tr contenteditable="true">
+							<td contenteditable="false">
 								<input type="checkbox">
-								<label> Pasirinkti</label>
 							</td>
 							<td>B&B HOTEL Paris 17 Batignolles</td>
 							<td>B&B Hotel Paris 17 Batignolles, 4 Bd Berthier, 75017 Paris, France</td>
 							<td>79€</td>
 						</tr>
-						<tr>
-							<td>
+						<tr contenteditable="true">
+							<td contenteditable="false">
 								<input type="checkbox">
-								<label> Pasirinkti</label>
 							</td>
 							<td>HotelF1 Paris Saint Ouen Marché Aux Puces</td>
 							<td>hotelF1 Paris Saint-Ouen - Marché aux Puces, 29 Rue du Dr Babinski, 75018 Paris, France</td>
 							<td>37€</td>
 						</tr>
-						<tr>
-							<td>
+						<tr contenteditable="true">
+							<td contenteditable="false">
 								<input type="checkbox">
-								<label> Pasirinkti</label>
 							</td>
 							<td>hotelF1 Paris Porte de Châtillon</td>
 							<td>hotelF1 Paris Porte de Châtillon, 23 Av. de la Prte de Châtillon, 75014 Paris, France</td>
@@ -211,8 +207,12 @@
 					<a href="administrate.html" style="color: #fff; text-decoration: none;">Atšaukti</a>
 				</button>
 
+				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="validateDelete();">
+					Pašalinti pasirinktus viešbučius
+				</button>
+
 				<button style="margin-top: 0px" class="btn btn-success btn-planner-search" onclick="validateEdit();">
-					<a href="administrate.html" style="color: #fff; text-decoration: none;">Patvirtinti redagavimus</a>
+					Patvirtinti redagavimus
 				</button>
 			</div>
 
@@ -265,16 +265,22 @@
 					"Adresas",
 					"Nakties kaina"
 				]
+				// count of items that are hard-coded into the table
+				var itemCount = 4;
 
                 function validateEdit() {
 					alert("Jūsų duomenys sėkmingai išsaugoti");
                 }
 				
 				function validateAdd() {
+					addRow();
 					alert("Viešbutis sėkmingai pridėtas");
 
-					if(document.getElementById('addTable')){
-						mainSpace.removeChild(document.getElementById('addTable'));
+					if(document.getElementById('addTableDiv')){
+						mainSpace.removeChild(document.getElementById('addTableDiv'));
+					}
+					if(document.getElementById('addCancel')){
+						mainSpace.removeChild(document.getElementById('addCancel'));
 					}
 					if(document.getElementById('addConfirm')){
 						mainSpace.removeChild(document.getElementById('addConfirm'));
@@ -283,13 +289,32 @@
 					document.getElementById('addRowButton').removeAttribute('hidden');
                 }
 				
+				function validateAddCancel(){
+					if(document.getElementById('addTableDiv')){
+						mainSpace.removeChild(document.getElementById('addTableDiv'));
+					}
+					if(document.getElementById('addCancel')){
+						mainSpace.removeChild(document.getElementById('addCancel'));
+					}
+					if(document.getElementById('addConfirm')){
+						mainSpace.removeChild(document.getElementById('addConfirm'));
+					}
+
+					document.getElementById('addRowButton').removeAttribute('hidden');
+				}
+				
 				function validateDelete() {
-					alert("Viešbutis sėkmingai pašalintas");
+					if(removeRows()){
+						alert("Viešbutis sėkmingai pašalintas");
+					}
+					else{
+						alert("Nėra pasirinkto viešbučio");
+					}
                 }
 				
 				function drawAddTable(){
-					if(document.getElementById('addTable')){
-						mainSpace.removeChild(document.getElementById('addTable'));
+					if(document.getElementById('addTableDiv')){
+						mainSpace.removeChild(document.getElementById('addTableDiv'));
 					}
 					if(document.getElementById('addRowButton')){
 						document.getElementById('addRowButton').setAttribute('hidden', 'true')
@@ -297,10 +322,11 @@
 					
 					var divTable = document.createElement("div");
 					divTable.setAttribute('style', 'display: block; table-layout: fixed;');
-					divTable.setAttribute('id', 'addTable');
+					divTable.setAttribute('id', 'addTableDiv');
 
 					var addTable = document.createElement("table");
 					addTable.setAttribute('class', 'travel-table');
+					addTable.setAttribute('id', 'addTable');
 
 					divTable.appendChild(addTable);
 
@@ -336,6 +362,19 @@
 
 					mainSpace.appendChild(divTable);
 
+					// cancel button
+					var divCancel = document.createElement("div");
+					divCancel.setAttribute('id', 'addCancel');
+					divCancel.setAttribute('style', 'display: inline-block');
+
+					var buttonCancel = document.createElement("button");
+					buttonCancel.setAttribute('style', 'margin-top: 0px');
+					buttonCancel.setAttribute('class', 'btn btn-success btn-planner-search');
+					buttonCancel.setAttribute('onclick', 'validateAddCancel()');
+					buttonCancel.textContent = "Atšaukti";
+
+					divCancel.appendChild(buttonCancel);
+
 					// confirm button
 					var divConfirm = document.createElement("div");
 					divConfirm.setAttribute('id', 'addConfirm');
@@ -348,15 +387,54 @@
 					buttonConfirm.textContent = "Pridėti";
 
 					divConfirm.appendChild(buttonConfirm);
+
+					mainSpace.appendChild(divCancel);
 					mainSpace.appendChild(divConfirm);
 				}
 
 				function addRow(){
-					//TODO
+					if(!document.getElementById('addTableDiv')){
+						return;
+					}
+
+					let table = document.getElementById('mainTable');
+					let itemToAdd = [].slice.call(document.getElementById('addTable').rows[1].childNodes);
+
+					let row = document.createElement("tr");
+					row.setAttribute("contenteditable", "true");
+
+					let checkboxElement = document.createElement("td");
+					checkboxElement.setAttribute("contenteditable", "false");
+
+					let checkbox = document.createElement("input");
+					checkbox.setAttribute("type", "checkbox");
+
+					checkboxElement.appendChild(checkbox);
+					row.appendChild(checkboxElement);
+
+					for (let item of itemToAdd) {
+						row.appendChild(item);
+					}
+
+					table.appendChild(row);
+					itemCount++;
 				}
 
 				function removeRows(){
-					//TODO
+					let table = document.getElementById('mainTable');
+					let temp = false;
+
+					for (let i = itemCount; i >= 1; i--) {
+						let checkbox = table.rows[i].children[0].children[0];
+
+						if(checkbox.checked){
+							table.deleteRow(i);
+							itemCount--;
+							temp = true;
+						}
+					}
+
+					return temp;
 				}
             </script>
 		</div>
