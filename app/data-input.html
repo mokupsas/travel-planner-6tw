@@ -68,9 +68,9 @@
 	
 	<div id="page">
 
-	<img class="ad-banner-img-left" src="images/reklama1.png" style="right:20px; top:125px;"/>
+	<img class="ad-banner-img-left" src="images/reklama1.png"/>
 
-	<img class="ad-banner-img-right" src="images/reklama4.png" style="top:125px";/>
+	<img class="ad-banner-img-right" src="images/reklama4.png"/>
 	
 	<!-- <div class="page-inner"> -->
 		<nav class="gtco-nav" role="navigation">
@@ -82,7 +82,7 @@
 						<img class="logo" src="images/logo_2.png"/>
 					</div>
 					<div class="nav-color-block"></div>
-					<div style="font-weight: bold" class="col-8 text-end">
+					<div style="font-weight: bold;" class="col-8 text-end">
 						<ul>
 							<li><a href="index.html">Pagrindinis</a></li>
 							<!-- <li><a href="planuotojas.html">Planuotojas</a></li> -->
@@ -113,6 +113,8 @@
 					<option selected>Pasirinkite...</option>
 					<option value="1">1</option>
 					<option value="2">Daugiau</option>
+					<option value="3">1, tačiau domina partneris</option>
+					<option value="4">1, tačiau domina partnerė</option>
 				  </select>
                   <label class="form-label">Jūsų duomenys</label>
                   <div class="data-input-field">
@@ -146,27 +148,30 @@
 			  <img class="background-plane" src="https://milkywaymovie.com/wp-content/uploads/2021/07/airplane-2.png" style="position: fixed; top: 100px; right: 100px; opacity: 0.6; z-index: -1; filter: hue-rotate(10deg); transform: rotate(90deg) scale(1.1);">
 			  <img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; top: 0; left: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9); opacity: 0.8; transform: rotate(-10deg) scale(1.1);">
 			  <img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; top: 150px; right: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
-		  		  
-			<script>
-                function validateAndRedirect() {
-                    var selectField = document.getElementById("travelers");
-                    var selectedValue = selectField.value;
-                    if (selectedValue == "1") {
-                        alert("Jūsų duomenys sėkmingai išsaugoti");
-						var newButton = document.createElement("button");
-						newButton.innerHTML = "Toliau";
-						newButton.className = "btn btn-success btn-planner-search just-button";
-						newButton.onclick = function() {
-							window.location.href = "main-travel.html";
-						};
-          				document.body.appendChild(newButton);
-                    } else if (selectedValue == "2") {
-                        window.location.href = "other.html";
-                    } else {
-                        alert("Pasirinkite keleivių skaičių");
-                    }
-                }
-            </script>
+		  	  
+			  <script>
+				function validateAndRedirect() {
+				  var selectField = document.getElementById("travelers");
+				  var selectedValue = selectField.value;
+			  
+				  if (selectedValue === "1") {
+					alert("Jūsų duomenys sėkmingai išsaugoti");
+					window.location.href = "main-travel.html";
+				  } else if (selectedValue === "2") {
+					alert("Jūsų duomenys sėkmingai išsaugoti");
+					window.location.href = "other.html";
+				  } else if (selectedValue === "3") {
+					alert("Jūsų duomenys sėkmingai išsaugoti");
+					window.location.href = "main-travel-boy.html";
+				  } else if (selectedValue === "4") {
+					alert("Jūsų duomenys sėkmingai išsaugoti");
+					window.location.href = "main-travel-girl.html";
+				  } else {
+					alert("Pasirinkite keleivių skaičių");
+				  }
+				}
+			  </script>
+			  
 		</div>
 	</div>
 	

@@ -1,5 +1,10 @@
 body {
   height: 100vh;
+  overflow: hidden;
+}
+
+ul.header {
+  margin-top: 20px;
 }
 
 .index-container {
@@ -88,15 +93,36 @@ body {
         cursor: pointer;
 }
 
+.big-button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1750px;
+  color: white;
+  text-decoration: none;
+  background-color: #800000;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+}
+
 .big-button:hover {
   background-color: #4cae4c;
   color: white;
 }
 
+.big-button2:hover {
+  background-color: #a30404;
+  color: white;
+}
+
 .just-button {
   position: absolute;
-  bottom: 50px;
-  right: 880px;
+  bottom: 203px;
+  right: 1130px;
 }
 
 .loading-travel {
@@ -105,7 +131,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-  position: absolute;
+  position: fixed;
   left: 300px;
   top: 30px;
 }
@@ -128,6 +154,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  background-color: #3f6c51;
 }
 
 .dropdown-content a {
@@ -139,16 +166,16 @@ body {
 .dropdown:hover .dropdown-content {display: block;}
 
 .fireworks {
-  position: fixed;
-  bottom: 0;
-  left: 550px;
+  position: absolute;
+  bottom: 95px;
+  left: 600px;
 }
 
 .travel-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1750px;
+  width: 1800px;
   color: white;
   text-decoration: none;
   background-color: #3F6C51;
@@ -158,20 +185,63 @@ body {
         border: none;
         border-radius: 10px;
         cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 100px;
+  left: -50px;
+  text-align: center;
+}
+
+.travel-header2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1800px;
+  color: white;
+  text-decoration: none;
+  background-color: #800000;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  text-align: center;
 }
 
 .travel-table {
   font-size: 14px;
+  top: 180px;
 }
 
 .travel-image {
   display: block;
   margin: 50px auto;
   max-width: 100%;
+  scale: 0.3;
+  position: absolute;
+  margin-top: 10px;
+}
+.travel-image2 {
+  display: block;
+  margin: 50px auto;
+  max-width: 100%;
   scale: 0.35;
-  position: fixed;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.travel-image3 {
+  display: block;
+  margin: 50px auto;
+  max-width: 100%;
+  scale: 0.35;
+  position: absolute;
+  margin-top: 10px;
+  bottom: -320px;
+  left: 150px;
 }
 
 .background-plane {
@@ -294,6 +364,10 @@ label {
     left: 0
 }
 
+#timer {
+  display: none;
+}
+
 .logo {
 	height: 75px;
   line-height: 74px;
@@ -301,7 +375,7 @@ label {
   position: absolute;
   top: -21px;
   background-color: none;
-  display: block;
+  display: inline-block;
 }
 
 .index-header-name {
@@ -324,6 +398,8 @@ label {
     left: 100px;
     z-index: 200;
 	border-radius: 20px;
+  right:20px;
+  top:225px;
 }
 
 .ad-banner-img-right {
@@ -333,6 +409,7 @@ label {
     right: 100px;
     z-index: 200;
 	border-radius: 20px;
+  top: 225px;
 }
 
 #page {
