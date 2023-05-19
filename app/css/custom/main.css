@@ -469,6 +469,15 @@ label {
 	height: 480px;
 }
 
+.history-image {
+  scale: 0.4;
+  position: fixed;
+  top: -220px;
+  left: 662px;
+  display: block;
+  border-radius: 20px;
+}
+
 .ad-banner-img-left {
 	height: 560px;
     position: absolute;
