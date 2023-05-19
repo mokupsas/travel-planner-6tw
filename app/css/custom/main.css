@@ -286,6 +286,74 @@ ul.header {
   font-size: 12px !important;
 }
 
+.btn-red {
+  padding: 12px 24px !important;
+  font-size: 12px !important;
+  height: 42px;
+  background-color: #a30404;
+  display: block;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+  border: none;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: .5rem;
+  width: auto;
+}
+
+.btn-red:hover {
+  background-color: #ba0707;
+}
+
+.btn-index {
+  padding: 12px 24px !important;
+  font-size: 25px !important;
+  background-color: #8eb8e5;
+  margin-top: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70px;
+  width: 220px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-index:hover {
+  background-color: #a3cfff;
+}
+
+.btn-index2 {
+  padding: 12px 24px !important;
+  font-size: 25px !important;
+  background-color: #7c99b4;
+  margin-top: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70px;
+  width: 300px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-index2:hover {
+  background-color: #90b0cf;
+}
+
+
 .gtco-nav a {
   text-decoration: none;
 }
@@ -374,6 +442,16 @@ label {
   /* display: table-column; */
   position: absolute;
   top: -21px;
+  background-color: none;
+  display: inline-block;
+}
+
+.logo-index {
+	height: 180px;
+  line-height: 74px;
+  position: absolute;
+  top: 400px;
+  left: 200px;
   background-color: none;
   display: inline-block;
 }
