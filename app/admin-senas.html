@@ -59,12 +59,16 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- Bootstrap 5.2.  -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+		
 
 	</head>
 	<body style="background: linear-gradient(180deg, rgba(124,153,180,1) 0%, rgba(133,169,205,1) 50%, rgba(142,184,229,1) 100%)">
 		
 	<div class="gtco-loader"></div>
+	
+	<div id="page">
 
 	
 	<!-- <div class="page-inner"> -->
@@ -97,91 +101,78 @@
 				
 			</div>
 		</nav>
-
-
-	<div id="page" class="scroll">
-
-	<img class="ad-banner-img-left" src="images/reklama1.png"/>
-
-	<img class="ad-banner-img-right" src="images/reklama4.png"/>
 	
-	<div class="gtco-cover gtco-cover-md index-container" style="top: 30px" role="banner">
-		
+	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div class="gtco-container">
+			
+			<div class="">
 
-			<h1>ADMINISTRAVIMAS</h1>
-			<hr/>
-			<div class="admin-block-container">
-				<h2>ATASKAITA</h2>
-				<hr/>
-				<div class="row" style="font-size: 14px;">
-					<div class="col">
-						<div class="row">
-							<div class="col">
-								<p><b>Užsakymų</b></p>
-								<p>Viso: 145</p>
-							</div>
-							<div class="col">
-								<p><b>Klientų</b></p>
-								<p>Viso: 134</p>
-							</div>
-							<div class="col">
-								<p><b>Įvykusių kelionių</b></p>
-								<p>Viso: 94</p>
-							</div>
-							<div class="col">
-								<p><b>Būsimų kelionių</b></p>
-								<p>Viso: 51</p>
-							</div>
+				<div class="admin-block-container">
+					<h2>KELIONĖS</h2>
+					<hr/>
+					<div class="row" style="font-size: 14px;">
+						<div class="col">
+							<p><b>Užsakymų</b></p>
+							<p>Viso: 14</p>
+
+							<p><b>Valstybės</b></p>
+							<ul class="list-group">
+								<li class="list-group-item">
+									Lietuva
+									<span class="badge bg-primary rounded-pill">14</span>
+								</li>
+								<li class="list-group-item">
+									Estija
+									<span class="badge bg-primary rounded-pill">0</span>
+								</li>
+								<li class="list-group-item">
+									Latvija
+									<span class="badge bg-primary rounded-pill">0</span>
+								</li>
+							</ul>
 						</div>
-						<div class="row">
-							<div class="col">
-								<p><b>Vidutinis klientų pasitenkinimas</b></p>
-								<p>Vidurkis: 9.4 / 10</p>
-							</div>
+						<div class="col">
+							<p><b>Kelionių sąrašas</b></p>
 						</div>
-					</div>
+						<div class="col">
+							<p><b>Pridėti kelionę</b></p>
+							<input class="form-input form-control mb-3" type="text" placeholder="Antraštė" aria-label="default input example">
+								<select class="form-input form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+									<option selected>Pasirinkite išvykimo vietą</option>
+									<option value="1">Lietuva</option>
+									<option value="2">Estija</option>
+									<option value="3">Latvija</option>
+							  	</select>
+								<select class="form-input form-select form-select-lg mb-5" aria-label=".form-select-lg example">
+									<option selected>Pasirinkite kelionės tikslą</option>
+									<option value="1">Lietuva</option>
+									<option value="2">Estija</option>
+									<option value="3">Latvija</option>
+								</select>	
+								<label class="form-label" for="startDate">Išvykimo data</label>
+								<input id="startDate" class="form-input form-control mb-3" type="date" />
+								<label class="form-label" for="startDate">Atvykimo data</label>
+								<input id="startDate" class="form-input form-control mb-3" type="date" />
+
+								<input class="form-input form-control" type="text" placeholder="Kelionės kaina" aria-label="default input example">
+						</div>
+					</div>					
 				</div>
-									
-			</div>
-			<div style="display: flex">
-                <div style="height: 600px;" class="data-input-container">
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 330px; left: 260px;"><a href="hotels-edit.html" style="color: #fff; text-decoration: none;">Viešbučių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 425px; left: 250px;"><a href="paths-edit.html" style="color: #fff; text-decoration: none;">Kelionių krypčių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 520px; left: 250px;"><a href="partners-edit.html" style="color: #fff; text-decoration: none;">Verslo partnerių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 615px; left: 250px;"><a href="places-edit.html" style="color: #fff; text-decoration: none;">Lankytinų vietų valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 710px; left: 245px;"><a href="travels-edit-admin.html" style="color: #fff; text-decoration: none;">Užsakytų kelionių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-				
-
-              	</div>
-				
-			  <!-- <div>
-                <button style="top: 530px; left: 320px; margin-top: 30px; position: fixed;" type="submit" class="btn btn-success btn-planner-search" onclick=confirm()>Patvirtinti</button>
-              </div>  -->
-			  <img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
-			  <img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; bottom: 0; right: 0; left: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
-			  <img class="background-plane" src="https://img.freepik.com/free-icon/plane_318-905120.jpg" style="position: fixed; top: 300px; right: 0; transform: rotate(-30deg) scale(0.2); filter: hue-rotate(15deg);">
-			  <img class="background-plane" src="https://milkywaymovie.com/wp-content/uploads/2021/07/airplane-2.png" style="position: fixed; top: 600px; left: 0; opacity: 0.7;">
-			  <img class="background-plane" src="https://milkywaymovie.com/wp-content/uploads/2021/07/airplane-2.png" style="position: fixed; top: 100px; right: 100px; opacity: 0.6; z-index: -1; filter: hue-rotate(10deg); transform: rotate(90deg) scale(1.1);">
-			  <img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; top: 0; left: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9); opacity: 0.8; transform: rotate(-10deg) scale(1.1);">
-			  <img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; top: 150px; right: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
-			  <img class="background-plane" src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/130962/shokunin_World_Map.png" style="position: fixed; top: 250px; right: 500px; transform: scale(1); filter: brightness(1.2) opacity(0.3) sepia(100%) saturate(10000%) hue-rotate(-45deg); z-index: -2; scale: 1.5">
 
 			</div>
+
 		</div>
-
-		<script>
-			function confirm() {
-			  alert("Kelionė sėkmingai redaguota!");
-			}
-			</script>
 	</div>
-	
+
+	<img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
+	<img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; bottom: 0; right: 0; left: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
+	<img class="background-plane" src="https://img.freepik.com/free-icon/plane_318-905120.jpg" style="position: fixed; top: 300px; right: 0; transform: rotate(-30deg) scale(0.2); filter: hue-rotate(15deg);">
+	<img class="background-plane" src="https://milkywaymovie.com/wp-content/uploads/2021/07/airplane-2.png" style="position: fixed; top: 600px; left: 0; opacity: 0.7;">
+	<img class="background-plane" src="https://milkywaymovie.com/wp-content/uploads/2021/07/airplane-2.png" style="position: fixed; top: 100px; right: 100px; opacity: 0.6; z-index: -1; filter: hue-rotate(10deg); transform: rotate(90deg) scale(1.1);">
+	<img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; top: 0; left: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9); opacity: 0.8; transform: rotate(-10deg) scale(1.1);">
+	<img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; top: 150px; right: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
+	<img class="background-plane" src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/130962/shokunin_World_Map.png" style="position: fixed; top: 250px; right: 500px; transform: scale(1); filter: brightness(1.2) opacity(0.3) sepia(100%) saturate(10000%) hue-rotate(-45deg); z-index: -2; scale: 1.5">
+
 	<footer id="cs-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row">
@@ -232,4 +223,3 @@
 
 	</body>
 </html>
-  

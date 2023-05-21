@@ -106,57 +106,81 @@
 	<img class="ad-banner-img-right" src="images/reklama4.png"/>
 	
 	<div class="gtco-cover gtco-cover-md index-container" style="top: 30px" role="banner">
-		
 		<div class="gtco-container">
-
-			<h1>ADMINISTRAVIMAS</h1>
+			<h1>KELIONIŲ ISTORIJA</h1>
 			<hr/>
-			<div class="admin-block-container">
-				<h2>ATASKAITA</h2>
-				<hr/>
-				<div class="row" style="font-size: 14px;">
-					<div class="col">
-						<div class="row">
-							<div class="col">
-								<p><b>Užsakymų</b></p>
-								<p>Viso: 145</p>
-							</div>
-							<div class="col">
-								<p><b>Klientų</b></p>
-								<p>Viso: 134</p>
-							</div>
-							<div class="col">
-								<p><b>Įvykusių kelionių</b></p>
-								<p>Viso: 94</p>
-							</div>
-							<div class="col">
-								<p><b>Būsimų kelionių</b></p>
-								<p>Viso: 51</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col">
-								<p><b>Vidutinis klientų pasitenkinimas</b></p>
-								<p>Vidurkis: 9.4 / 10</p>
-							</div>
-						</div>
-					</div>
-				</div>
-									
-			</div>
 			<div style="display: flex">
-                <div style="height: 600px;" class="data-input-container">
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 330px; left: 260px;"><a href="hotels-edit.html" style="color: #fff; text-decoration: none;">Viešbučių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 425px; left: 250px;"><a href="paths-edit.html" style="color: #fff; text-decoration: none;">Kelionių krypčių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 520px; left: 250px;"><a href="partners-edit.html" style="color: #fff; text-decoration: none;">Verslo partnerių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 615px; left: 250px;"><a href="places-edit.html" style="color: #fff; text-decoration: none;">Lankytinų vietų valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
-					<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 710px; left: 245px;"><a href="travels-edit-admin.html" style="color: #fff; text-decoration: none;">Užsakytų kelionių valdymas</a></button>
-					<div><br><br><br><br><hr/></div>
+                <div style="height: 1000px;" class="data-input-container">
+				  <div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Kelionė Nr.: 1</label>
+                  </div>
+                  <div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Kryptis: Paryžius, Prancūzija</label>
+                  </div>
+				<div>
+					<label style="padding-bottom: 10px;" class="form-label">Kelionės data: Birželio 15-20, 2023</label>
+				</div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Veiklos: Aplankyti Eifelio bokštą, Luvro muziejų, Paryžiaus Dievo Motinos katedrą</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Viešbučiai: Hotel de Crillon, Four Seasons Hotel George V, Le Bristol Paris</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Trukmė: 6 dienos</label>
+                </div>
+				<div><br><hr/></div>
+				<img class="history-image" src="https://img.freepik.com/free-photo/eiffel-tower-with-bridge-river-seine-paris-france_649448-4968.jpg?w=740&t=st=1684527504~exp=1684528104~hmac=c7b683837e29f31ff4d13c01d4031b5ecd17f44de35c3cdbab91e1e43ac43a87">
+				<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 220px; left: 800px;"><a href="review-write.html" style="color: #fff; text-decoration: none;">Atsiliepimai</a></button>
+				<button id="cancelButton" style="margin-top: 30px; display: flex; position: absolute; top: 270px; left: 800px;" class="btn-red" style="color: #fff; text-decoration: none;" onclick=discard()>Atšaukti kelionę</button>
+
 				
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label"><br>Kelionė Nr.: 2</label>
+                  </div>
+                  <div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Kryptis: Roma, Italija</label>
+                  </div>
+				<div>
+					<label style="padding-bottom: 10px;" class="form-label">Kelionės data: Liepos 1-5, 2022</label>
+				</div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Veiklos: Aplankyti Palatino kalvą, koliziejų, Piazza della Repubblica</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Viešbučiai: Hotel Barocco, NH Collection Roma Fori Imperiali</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Trukmė: 5 dienos</label>
+                </div>
+				<div><br><hr/></div>
+				<img class="history-image2" src="https://img.freepik.com/free-photo/vertical-shot-famous-colosseum-rome-italy-during-sunset_181624-52589.jpg?w=740&t=st=1684668665~exp=1684669265~hmac=e44e7cc1316243c60daf85dcd1e41aaefe29588e61d688dd7104de53bf0cdd4e">
+				<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 530px; left: 800px;"><a href="review-write2.html" style="color: #fff; text-decoration: none;">Atsiliepimai</a></button>
+				<button style="margin-top: 30px; display: flex; position: absolute; top: 580px; left: 800px;" class="btn-grey" style="color: #fff; text-decoration: none;">Kelionė įvykusi</button>
+
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label"><br>Kelionė Nr.: 3</label>
+                  </div>
+                  <div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Kryptis: Tivatas, Juokdalnija</label>
+                  </div>
+				<div>
+					<label style="padding-bottom: 10px;" class="form-label">Kelionės data: Gegužės 14-27, 2022</label>
+				</div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Veiklos: Aplankyti Kotoro įlanką, Podgorica, Ostrogo vienuolynas</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Viešbučiai: Iberostar Bellevue, Hostel Old Town</label>
+                </div>
+				<div class="data-input-field">
+                    <label style="padding-bottom: 10px;" class="form-label">Trukmė: 14 dienų</label>
+                </div>
+				<div><br><hr/></div>
+				<img class="history-image3" src="https://img.freepik.com/free-photo/vertical-shot-body-water-rocky-cliffs-mountains_181624-1732.jpg?w=740&t=st=1684668727~exp=1684669327~hmac=1710ff6fd9d9286601914c91492132f26e9cce9800bf65ff1483869fc052ca4d">
+				<button class="btn btn-success btn-planner-search" style="margin-top: 30px; display: flex; position: absolute; top: 820px; left: 800px;"><a href="review-write3.html" style="color: #fff; text-decoration: none;">Atsiliepimai</a></button>
+				<button style="margin-top: 30px; display: flex; position: absolute; top: 870px; left: 800px;" class="btn-grey" style="color: #fff; text-decoration: none;">Kelionė įvykusi</button>
+
 
               	</div>
 				
@@ -176,16 +200,21 @@
 		</div>
 
 		<script>
-			function confirm() {
-			  alert("Kelionė sėkmingai redaguota!");
+
+			function discard() {
+				alert("Kelionė sėkmingai atšaukta! Klientas informuotas elektroniniu paštu.");
+				document.getElementById("cancelButton").innerHTML = "Kelionė atšaukta";
+				document.getElementById("cancelButton").className = "btn-yellow";
+				document.getElementById("cancelButton").disabled = true;
 			}
-			</script>
+				
+		</script>
 	</div>
 	
 	<footer id="cs-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-4"><a class="footer-link link-primary" href="administrate.html">Administravimas</a>
+				<div class="col-md-4"><a class="footer-link link-primary" href="#" onclick="showPasswordPrompt()">Administravimas</a>
 					<div style="border-left: 1px solid  rgb(177, 176, 176); height: 50px; position: fixed; left: 570px; bottom: 10px"></div>
 					<div style="border-left: 1px solid rgb(177, 176, 176); height: 50px; position: fixed; left: 850px; bottom: 10px"></div>
 				</div>
@@ -198,6 +227,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function showPasswordPrompt() {
+		var password = prompt("Įveskite slaptažodį:");
+		if (password === "slaptas") {
+			window.location.href = "administrate.html";
+		}
+		}
+	</script>
 
 	</div>
 	
