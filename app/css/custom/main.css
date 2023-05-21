@@ -502,7 +502,7 @@ label {
 .history-image {
   scale: 0.25;
   position: absolute;
-  top: -285px;
+  top: -245px;
   left: 302px;
   display: block;
   border-radius: 20px;
@@ -511,7 +511,7 @@ label {
 .history-image2 {
   scale: 0.25;
   position: absolute;
-  top: 20px;
+  top: 75px;
   left: 302px;
   display: block;
   border-radius: 20px;
@@ -520,7 +520,7 @@ label {
 .history-image3 {
   scale: 0.25;
   position: absolute;
-  top: 310px;
+  top: 390px;
   left: 302px;
   display: block;
   border-radius: 20px;

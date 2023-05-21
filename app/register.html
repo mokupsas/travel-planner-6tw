@@ -119,13 +119,15 @@
                     <input type="text" class="form-control form-input" placeholder="Elektroninis paštas" aria-describedby="basic-addon1">
                   </div>
 				  <div class="data-input-field" style="margin-top: 10px;">
-                    <input type="password" class="form-control form-input" placeholder="Slaptažodis" aria-describedby="basic-addon1">
-                  </div>
+					<input type="password" id="passwordInput" class="form-control form-input" placeholder="Slaptažodis" aria-describedby="basic-addon1" oninput="validatePassword()">
+					<span id="passwordValidationMessage"></span>
+				  </div>
 				  <div class="data-input-field" style="margin-top: 10px;">
-                    <input type="password" class="form-control form-input" placeholder="Pakartokite slaptažodį" aria-describedby="basic-addon1">
-                  </div>
+					<input type="password" id="passwordConfirmationInput" class="form-control form-input" placeholder="Pakartokite slaptažodį" aria-describedby="basic-addon1" oninput="validatePassword()">
+					<span id="passwordConfirmationValidationMessage"></span>
+				  </div>
                   <div>
-                    <a href="login.html" type="submit" style="color: white; margin-top: 30px; margin-bottom: 0px; display: flex-start;" class="btn btn-success btn-planner-search">Užsiregistruoti</a>
+                    <a href="login.html" type="submit" style="color: white; margin-top: 30px; margin-bottom: 0px; display: flex-start;" class="btn btn-success btn-planner-search" href="#" onclick="showPasswordPrompt()">Užsiregistruoti</a>
                   </div>
                 </div>
               </div>
@@ -157,6 +159,59 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function validatePassword() {
+		  const passwordInput = document.getElementById('passwordInput');
+		  const passwordConfirmationInput = document.getElementById('passwordConfirmationInput');
+		  const passwordValidationMessage = document.getElementById('passwordValidationMessage');
+		  const passwordConfirmationValidationMessage = document.getElementById('passwordConfirmationValidationMessage');
+		
+		  const password = passwordInput.value;
+		  const passwordConfirmation = passwordConfirmationInput.value;
+		
+		  passwordInput.classList.remove('invalid');
+		  passwordConfirmationInput.classList.remove('invalid');
+		  passwordValidationMessage.textContent = '';
+		  passwordConfirmationValidationMessage.textContent = '';
+		
+		  if (password.length < 8) {
+			passwordInput.classList.add('invalid');
+			passwordValidationMessage.textContent = 'Slaptažodis turi būti mažiausiai 8 simbolių ilgio.';
+		  }
+		
+		  if (!/[A-Z]/.test(password)) {
+			passwordInput.classList.add('invalid');
+			passwordValidationMessage.textContent = 'Slaptažodyje turi būti bent viena didžioji raidė.';
+		  }
+		
+		  if (!/\d/.test(password)) {
+			passwordInput.classList.add('invalid');
+			passwordValidationMessage.textContent = 'Slaptažodyje turi būti bent vienas skaičius.';
+		  }
+		
+		  if (passwordConfirmation !== password) {
+			passwordConfirmationInput.classList.add('invalid');
+			passwordConfirmationValidationMessage.textContent = 'Slaptažodžiai nesutampa.';
+		  }
+		}
+		</script>
+
+		<script>
+			function showPasswordPrompt() {
+			var password = prompt("Įveskite kodą, gautą el. paštu:");
+			if (password !== null && password !== "") {
+				alert("Jūsų tapatybė sėkmingai patvirtinta!");
+				window.location.href = "login.html";
+			}
+			}
+		</script>
+	  
+	  <style>
+		.invalid {
+		  border: 2px solid red;
+		}
+	  </style>
 
 	</div>
 	
