@@ -152,7 +152,7 @@
 	<footer id="cs-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-4"><a class="footer-link link-primary" href="administrate.html">Administravimas</a>
+				<div class="col-md-4"><a class="footer-link link-primary" href="#" onclick="showPasswordPrompt()">Administravimas</a>
 					<div style="border-left: 1px solid  rgb(177, 176, 176); height: 50px; position: fixed; left: 570px; bottom: 10px"></div>
 					<div style="border-left: 1px solid rgb(177, 176, 176); height: 50px; position: fixed; left: 850px; bottom: 10px"></div>
 				</div>
@@ -165,6 +165,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function showPasswordPrompt() {
+		var password = prompt("Įveskite slaptažodį:");
+		if (password === "slaptas") {
+			window.location.href = "administrate.html";
+		}
+		}
+	</script>
 
 	</div>
 	

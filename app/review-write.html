@@ -151,10 +151,12 @@
 
 
 	
-	<div class="gtco-cover gtco-cover-md index-container" role="banner">
+	<div class="gtco-cover gtco-cover-md index-container" style="top: 30px" role="banner">
 		<div id="mainSpace" class="gtco-container">
 
 			<div id="mainTableDiv">
+				<h1>ATSILIEPIMAI</h1>
+				<hr/>
 				<table id="mainTable" class="travel-table" >
 					<thead>
 						<tr>
@@ -408,7 +410,7 @@
 	<footer id="cs-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-4"><a class="footer-link link-primary" href="administrate.html">Administravimas</a>
+				<div class="col-md-4"><a class="footer-link link-primary" href="#" onclick="showPasswordPrompt()">Administravimas</a>
 					<div style="border-left: 1px solid  rgb(177, 176, 176); height: 50px; position: fixed; left: 570px; bottom: 10px"></div>
 					<div style="border-left: 1px solid rgb(177, 176, 176); height: 50px; position: fixed; left: 850px; bottom: 10px"></div>
 				</div>
@@ -421,6 +423,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function showPasswordPrompt() {
+		var password = prompt("Įveskite slaptažodį:");
+		if (password === "slaptas") {
+			window.location.href = "administrate.html";
+		}
+		}
+	</script>
 
 	</div>
 	

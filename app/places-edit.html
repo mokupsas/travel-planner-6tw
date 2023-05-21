@@ -74,7 +74,7 @@
 			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 			margin: 30px auto;
 			margin-bottom: 15px;
-			max-width: 800px;
+			max-width: 500px;
 			width: 100%;
             top: -500px;
             left: 65px;
@@ -155,15 +155,15 @@
 		<div id="mainSpace" class="gtco-container">
 
 			<div id="mainTableDiv">
-				<h1>VIEŠBUČIAI</h1>
+				<h1>LANKYTINOS VIETOS</h1>
 				<hr/>
 				<table id="mainTable" class="travel-table" >
 					<thead>
 						<tr>
 							<th>Pasirinkimas</th>
-							<th>Viešbučio pavadinimas</th>
-							<th>Adresas</th>
-							<th>Nakties kaina</th>
+							<th>Lankytina vieta</th>
+							<th>Šalis, miestas</th>
+							<th>Kaina</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -171,33 +171,33 @@
 							<td contenteditable="false">
 								<input type="checkbox">
 							</td>
-							<td>Pullman Paris Tour Eiffel</td>
-							<td>Pullman Paris Tour Eiffel, 18 Avenue De Suffren, 22 Rue Jean Rey Entrée Au, 75015 Paris, France</td>
-							<td>601€</td>
+							<td>Eifelio bokštas</td>
+							<td>Prancūzija, Paryžius</td>
+							<td>15.00€/asm.</td>
 						</tr>
 						<tr contenteditable="true">
 							<td contenteditable="false">
 								<input type="checkbox">
 							</td>
-							<td>B&B HOTEL Paris 17 Batignolles</td>
-							<td>B&B Hotel Paris 17 Batignolles, 4 Bd Berthier, 75017 Paris, France</td>
-							<td>79€</td>
+							<td>Koliziejus</td>
+							<td>Italija, Roma</td>
+							<td>13.50€/asm.</td>
 						</tr>
 						<tr contenteditable="true">
 							<td contenteditable="false">
 								<input type="checkbox">
 							</td>
-							<td>HotelF1 Paris Saint Ouen Marché Aux Puces</td>
-							<td>hotelF1 Paris Saint-Ouen - Marché aux Puces, 29 Rue du Dr Babinski, 75018 Paris, France</td>
-							<td>37€</td>
+							<td>Palatino kalva</td>
+							<td>Italija, Roma</td>
+							<td>Nemokamai</td>
 						</tr>
 						<tr contenteditable="true">
 							<td contenteditable="false">
 								<input type="checkbox">
 							</td>
-							<td>hotelF1 Paris Porte de Châtillon</td>
-							<td>hotelF1 Paris Porte de Châtillon, 23 Av. de la Prte de Châtillon, 75014 Paris, France</td>
-							<td>37€</td>
+							<td>Kotoras</td>
+							<td>Juodkalnija, Tivatas</td>
+							<td>Nemokamai</td>
 						</tr>
 					</tbody>
 				</table>
@@ -209,7 +209,7 @@
 				</button>
 
 				<button style="margin-top: 0px; display: flex; position: absolute; top: 150px; left: 248px" class="btn btn-success btn-planner-search" onclick="validateDelete();">
-					Pašalinti pasirinktus viešbučius
+					Pašalinti pasirinktas vietas
 				</button>
 
 				<button style="margin-top: 0px; display: flex; position: absolute; top: 150px; left: 468px" class="btn btn-success btn-planner-search" onclick="validateEdit();">
@@ -219,7 +219,7 @@
 
 			<div id="addRowButton">
 				<button style="margin-top: 0px; display: flex; position: absolute; top: 150px; left: 650px" class="btn btn-success btn-planner-search" onclick="drawAddTable();">
-					Pridėti naują viešbutį
+					Pridėti naują vietą
 				</button>
 			</div>
 
@@ -263,9 +263,9 @@
 			<script>
 				const mainSpace = document.getElementById("mainSpace");
 				const headers = [
-					"Viešbučio pavadinimas",
-					"Adresas",
-					"Nakties kaina"
+					"Lankytina vieta",
+					"Šalis, miestas",
+					"Kaina"
 				]
 				// count of items that are hard-coded into the table
 				var itemCount = 4;
@@ -276,7 +276,7 @@
 				
 				function validateAdd() {
 					addRow();
-					alert("Viešbutis sėkmingai pridėtas");
+					alert("Vieta sėkmingai pridėta");
 
 					if(document.getElementById('addTableDiv')){
 						mainSpace.removeChild(document.getElementById('addTableDiv'));
@@ -307,10 +307,10 @@
 				
 				function validateDelete() {
 					if(removeRows()){
-						alert("Viešbutis sėkmingai pašalintas");
+						alert("Vieta sėkmingai pašalinta");
 					}
 					else{
-						alert("Nėra pasirinkto viešbučio");
+						alert("Nėra pasirinktos vietos");
 					}
                 }
 				
@@ -371,7 +371,7 @@
 					divCancel.setAttribute('style', 'display: inline-block');
 
 					var buttonCancel = document.createElement("button");
-					buttonCancel.setAttribute('style', 'margin-top: 0px; position: relative; bottom: -48px; left: -300px; display: inline-block');
+					buttonCancel.setAttribute('style', 'margin-top: 0px; position: relative; bottom: -48px; left: -230px; display: inline-block');
 					buttonCancel.setAttribute('class', 'btn btn-success btn-planner-search');
 					buttonCancel.setAttribute('onclick', 'validateAddCancel()');
 					buttonCancel.textContent = "Atšaukti";
@@ -384,7 +384,7 @@
 					divConfirm.setAttribute('style', 'display: inline-block');
 
 					var buttonConfirm = document.createElement("button");
-					buttonConfirm.setAttribute('style', 'margin-top: 0px; position: relative; bottom: -48px; left: -295px;  display: inline-block');
+					buttonConfirm.setAttribute('style', 'margin-top: 0px; position: relative; bottom: -48px; left: -210px;  display: inline-block');
 					buttonConfirm.setAttribute('class', 'btn btn-success btn-planner-search');
 					buttonConfirm.setAttribute('onclick', 'validateAdd()');
 					buttonConfirm.textContent = "Pridėti";

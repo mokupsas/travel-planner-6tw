@@ -134,6 +134,15 @@
 					<div class="data-input-field">
 						<label style="padding-bottom: 10px;" class="form-label">Viešbučiai: Hotel de Crillon, Four Seasons Hotel George V, Le Bristol Paris</label>
 					</div>
+					<div class="data-input-field">
+						<label style="padding-bottom: 10px;" class="form-label">Vieta lėktuve: F21</label>
+					</div>
+					<div class="data-input-field">
+						<label style="padding-bottom: 10px;" class="form-label">Maitinimas lėktuve: Kava/arbata, sumuštinis su pasirinktu įdaru, šokoladinis pyragas</label>
+					</div>
+					<div class="data-input-field">
+						<label style="padding-bottom: 10px;" class="form-label">Veiklos: Aplankyti Eifelio bokštą, Luvro muziejų, Paryžiaus Dievo Motinos katedrą</label>
+					</div>
 					<div class="data-input-field" style="margin-top: 10px;">
 						<input type="text" class="form-control form-input" placeholder="Trukmė (dienomis)" aria-describedby="basic-addon1">
 					</div>
@@ -164,7 +173,7 @@
 	<footer id="cs-footer" role="contentinfo">
 		<div class="gtco-container">
 			<div class="row">
-				<div class="col-md-4"><a class="footer-link link-primary" href="administrate.html">Administravimas</a>
+				<div class="col-md-4"><a class="footer-link link-primary" href="#" onclick="showPasswordPrompt()">Administravimas</a>
 					<div style="border-left: 1px solid  rgb(177, 176, 176); height: 50px; position: fixed; left: 570px; bottom: 10px"></div>
 					<div style="border-left: 1px solid rgb(177, 176, 176); height: 50px; position: fixed; left: 850px; bottom: 10px"></div>
 				</div>
@@ -177,6 +186,15 @@
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		function showPasswordPrompt() {
+		var password = prompt("Įveskite slaptažodį:");
+		if (password === "slaptas") {
+			window.location.href = "administrate.html";
+		}
+		}
+	</script>
 
 	</div>
 	
