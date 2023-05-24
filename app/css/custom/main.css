@@ -169,6 +169,7 @@ ul.header {
   position: absolute;
   bottom: 95px;
   left: 600px;
+  z-index: 1;
 }
 
 .travel-header {
@@ -585,4 +586,8 @@ label {
   text-align: center;
   display: block;
   margin-top: 10px;
+}
+
+.btn {
+  z-index: 100 !important;
 }
