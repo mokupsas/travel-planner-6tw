@@ -71,7 +71,6 @@
 	<img class="ad-banner-img-left" src="images/reklama1.png"/>
 
 	<img class="ad-banner-img-right" src="images/reklama4.png"/>
-
 	
 	<!-- <div class="page-inner"> -->
 		<nav class="gtco-nav" role="navigation">
@@ -107,48 +106,39 @@
 	<div class="gtco-cover gtco-cover-md index-container" role="banner">
 		<div class="gtco-container">
 			
-			<div style="display: flexbox">
-                <div class="data-input-container">
-                  	<h1 class="mb-5">KELIONĖS REDAGAVIMAS</h1>
-					<div class="data-input-field">
-                    	<label style="padding-bottom: 10px;" class="form-label">Kelionė Nr.: 1</label>
-                  	</div>
-					<label class="form-label">Kelionės kryptis:</label>
-					<select id="travelers" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-						<option selected>Paryžius, Prancūzija</option>
-						<option value="1">Londonas, Jungtinė Karalystė</option>
-						<option value="2">Milanas, Italija</option>
-					</select>
-					<!--
-					<div class="data-input-field">
-						<label style="padding-bottom: 10px;" class="form-label">Kryptis: Paryžius, Prancūzija</label>
+			<div class="data-input-container">
+				<h1 class="mb-5">KELIONĖS APMOKĖJIMAS</h1>
+				<div class="row">
+					<div class="col">
+						<input type="text" class="form-control form-input" placeholder="Vardas" aria-describedby="basic-addon1">
 					</div>
-					-->
-					<div>
-						<label style="padding-bottom: 10px;" class="form-label" for="datepicker">Kelionės pradžios data:</label>
-						<input type="date" id="datepicker" name="datepicker">
+					<div class="col">
+						<input type="text" class="form-control form-input" placeholder="Pavardė" aria-describedby="basic-addon1">
 					</div>
-					<div class="data-input-field">
-						<label style="padding-bottom: 10px;" class="form-label">Veiklos: Aplankyti Eifelio bokštą, Luvro muziejų, Paryžiaus Dievo Motinos katedrą</label>
+				</div>	
+				<div class="data-input-field" style="margin-top: 10px;">
+					<input type="text" class="form-control form-input" placeholder="Elektroninis paštas" aria-describedby="basic-addon1">
+				</div>
+				<div class="data-input-field" style="margin-top: 10px;">
+					<input type="text" class="form-control form-input" placeholder="Kortelės numeris" aria-describedby="basic-addon1">
+				</div>
+				<div class="row" style="margin-top: 10px;">
+					<div class="col">
+						<input type="text" class="form-control form-input" placeholder="Galiojimo pabaiga" aria-describedby="basic-addon1">
 					</div>
-					<div class="data-input-field">
-						<label style="padding-bottom: 10px;" class="form-label">Viešbučiai: Hotel de Crillon, Four Seasons Hotel George V, Le Bristol Paris</label>
+					<div class="col">
+						<input type="text" class="form-control form-input" placeholder="CVC" aria-describedby="basic-addon1">
 					</div>
-					<div class="data-input-field">
-						<label style="padding-bottom: 10px;" class="form-label">Vieta lėktuve: F21</label>
+					<div class="col">
+						<input type="text" class="form-control form-input" placeholder="ZIP" aria-describedby="basic-addon1">
 					</div>
-					<div class="data-input-field">
-						<label style="padding-bottom: 10px;" class="form-label">Maitinimas lėktuve: Kava/arbata, sumuštinis su pasirinktu įdaru, šokoladinis pyragas</label>
-					</div>
-					<div class="data-input-field" style="margin-top: 10px;">
-						<input type="text" class="form-control form-input" placeholder="Trukmė (dienomis)" aria-describedby="basic-addon1">
-					</div>
-              	</div>
-			  <div>
-				<a href="travel-page.html">
-					<button style="margin-top: 30px;" type="submit" class="btn btn-success btn-planner-search" onclick=confirm()>Patvirtinti</button>
-				</a>
-              </div> 
+				</div>	
+				<img class="payment-gateways-icon" src="https://biogaia.com.my/wp-content/uploads/2021/08/Payment-Logo-768x486-1.webp"/>
+            </div>
+            <div>
+                <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-planner-search" onclick="pay()">Apmokėti</button>
+              </div>       
+			         
 			  <img class="background-plane" src="https://dummyflights.com/dummy/assets/images/plane1-run.png" style="position: fixed; bottom: 0; right: 0; filter: hue-rotate(230deg) brightness(1.5) saturate(0.8) opacity(0.9);">
 			  <img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; bottom: 0; right: 0; left: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
 			  <img class="background-plane" src="https://img.freepik.com/free-icon/plane_318-905120.jpg" style="position: fixed; top: 300px; right: 0; transform: rotate(-30deg) scale(0.2); filter: hue-rotate(15deg);">
@@ -158,13 +148,13 @@
 			  <img class="background-plane" src="https://static.wixstatic.com/media/501df0_24f3e74956de441aac15691dde75bb06~mv2.png/v1/fill/w_410,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Circle%20Stitch.png" style="position: fixed; top: 150px; right: 1500px; transform: scale(1); filter: hue-rotate(15deg) brightness(1.2) opacity(0.6);">
 			  <img class="background-plane" src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/130962/shokunin_World_Map.png" style="position: fixed; top: 250px; right: 500px; transform: scale(1); filter: brightness(1.2) opacity(0.3) sepia(100%) saturate(10000%) hue-rotate(-45deg); z-index: -2; scale: 1.5">
 
-			</div>
-
-		<script>
-			function confirm() {
-			  alert("Kelionė sėkmingai redaguota!");
-			}
-			</script>
+			<script>
+                function pay() {
+                    alert("Sėkmingai apmokėjote kelionę!");
+					window.location.href = "travel-page4.html";
+                }
+            </script>
+		</div>
 	</div>
 	
 	<footer id="cs-footer" role="contentinfo">
@@ -226,4 +216,4 @@
 
 	</body>
 </html>
-  
+

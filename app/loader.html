@@ -67,6 +67,13 @@
 		}
 	</style>
 	<script>
+		var destinations = [
+			"travel-page3.html",
+			"travel-page4.html",
+			"travel-page.html"
+		];
+		var currentIndex = localStorage.getItem("currentIndex") || 0;
+	
 		window.onload = function() {
 			var seconds = 4;
 			var countdown = setInterval(function() {
@@ -74,11 +81,14 @@
 				seconds--;
 				if (seconds < 0) {
 					clearInterval(countdown);
-					window.location = "travel-page.html";
+					window.location = destinations[currentIndex];
+					currentIndex = (parseInt(currentIndex) + 1) % destinations.length;
+					localStorage.setItem("currentIndex", currentIndex);
 				}
 			}, 1000);
 		};
 	</script>
+	
 
 	</head>
 	<body style="background: linear-gradient(180deg, rgba(124,153,180,1) 0%, rgba(133,169,205,1) 50%, rgba(142,184,229,1) 100%)">
